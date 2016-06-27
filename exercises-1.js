@@ -1,3 +1,5 @@
+
+
 // Q1
 // Write a function called `sum` that takes two
 // parameters and returns the sum of those 2 numbers.
@@ -5,7 +7,8 @@ var sum = function (x,y) {
   return x + y;
 };
 
-
+console.assert(sum(4,5)===10);
+console.assert(sum(4,5)===9);
 
 // Q2
 // Write a function named `avg` that takes 3 parameters
@@ -14,6 +17,8 @@ var avg = function (x,y,z){
   return (x+y+z) / 3;
 };
 
+  console.assert(avg(3,3,3)===10)
+  console.assert(avg(3,3,3)===3)
 
 // Q3
 // Write a function called `getLength` that takes one
@@ -22,6 +27,9 @@ var getLength = function(string) {
   return (string.length);
 
 };
+
+console.assert(getLength("lindsay")===3)
+console.assert(getLength("lindsay")===7)
 
 
 // Q4
@@ -46,10 +54,11 @@ return 'true';
 // is the parameter that was passed in.
 
 var greet = function (name){
-  return "hello" + name;
+  return "hello,"+ name;
 }
 
-
+console.assert(greet("lindsay")=== 0)
+console.assert(greet("lindsay")=== "hello,lindsay")
 
 // Q6
 // Write a function called `madlib` that takes
@@ -57,7 +66,11 @@ var greet = function (name){
 // should insert the words into a pre-defined
 // sentence. Finally the function should return
 // that sentence.
-// Note: When I say words and sentence I mean
-// strings. For example:
-// words: "quick", "fox", "fence"
-// sentence: "quick brown fox jumps over the fence"
+
+var madLib = function (w,x,y,z){
+  return w + 'my name is ' + x + 'and I like ' + y + 'and ' + z;
+
+};
+
+console.assert(madLib("this","is","a","string")=== "x my name y isand I likez string")
+console.assert(madLib("this","is","a","string")=== "thismy name is isand I like aand string")
